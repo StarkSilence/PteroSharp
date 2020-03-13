@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ChaseW\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\ChaseW\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\ChaseW\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\ChaseW\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\ChaseW\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\ChaseW\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\ChaseW\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\ChaseW\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\ChaseW\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ChaseW\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_PteroSharp.209727044.00" t="ExcludeRecursive" />
+    <e p="F:\Repositories\PteroSharp" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PteroSharp" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PteroSharp.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PteroApp.cs" t="Include" />
+        <e p="PteroLocation.cs" t="Include" />
+        <e p="PteroNest.cs" t="Include" />
+        <e p="PteroNode.cs" t="Include" />
+        <e p="PteroServer.cs" t="Include" />
+        <e p="PteroServerContainer.cs" t="Include" />
+        <e p="PteroServerContainerEnvironment.cs" t="Include" />
+        <e p="PteroServerFeatureLimits.cs" t="Include" />
+        <e p="PteroServerLimits.cs" t="Include" />
+        <e p="PteroSharp.csproj" t="IncludeRecursive" />
+        <e p="PteroStats.cs" t="Include" />
+        <e p="PteroStatsCPU.cs" t="Include" />
+        <e p="PteroStatsDisk.cs" t="Include" />
+        <e p="PteroStatsMemory.cs" t="Include" />
+        <e p="PteroUser.cs" t="Include" />
+        <e p="Response" t="Include">
+          <e p="PteroResponse.cs" t="Include" />
+          <e p="PteroResponseMeta.cs" t="Include" />
+          <e p="PteroResponsePagination.cs" t="Include" />
+          <e p="PteroResponseUser.cs" t="Include" />
+          <e p="PteroServerDeploy.cs" t="Include" />
+        </e>
+      </e>
+      <e p="PteroSharp.sln" t="IncludeFlat" />
+      <e p="PteroTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PteroTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PteroAppTest.cs" t="Include" />
+        <e p="PteroTest.csproj" t="IncludeRecursive" />
+        <e p="server.txt" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

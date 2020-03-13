@@ -1,0 +1,8 @@
+F:\Repositories\PteroSharp\PteroSharp\bin\Debug\netcoreapp3.1\PteroSharp.deps.json
+F:\Repositories\PteroSharp\PteroSharp\bin\Debug\netcoreapp3.1\PteroSharp.dll
+F:\Repositories\PteroSharp\PteroSharp\bin\Debug\netcoreapp3.1\PteroSharp.pdb
+F:\Repositories\PteroSharp\PteroSharp\obj\Debug\netcoreapp3.1\PteroSharp.csprojAssemblyReference.cache
+F:\Repositories\PteroSharp\PteroSharp\obj\Debug\netcoreapp3.1\PteroSharp.AssemblyInfoInputs.cache
+F:\Repositories\PteroSharp\PteroSharp\obj\Debug\netcoreapp3.1\PteroSharp.AssemblyInfo.cs
+F:\Repositories\PteroSharp\PteroSharp\obj\Debug\netcoreapp3.1\PteroSharp.dll
+F:\Repositories\PteroSharp\PteroSharp\obj\Debug\netcoreapp3.1\PteroSharp.pdb

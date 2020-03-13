@@ -1,7 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using PteroSharp.Model;
 
-namespace PteroSharp.Response
+namespace PteroSharp.Model.Response
 {
     internal class PteroResponseUser
     {

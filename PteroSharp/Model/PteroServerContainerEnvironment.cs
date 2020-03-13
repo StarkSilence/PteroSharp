@@ -1,4 +1,4 @@
-﻿namespace PteroSharp
+﻿namespace PteroSharp.Model
 {
     public class PteroServerContainerEnvironment
     {

@@ -4,7 +4,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
-using PteroSharp.Response;
+using PteroSharp.Model;
+using PteroSharp.Model.Response;
 
 namespace PteroSharp
 {

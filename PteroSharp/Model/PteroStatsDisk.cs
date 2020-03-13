@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace PteroSharp
+namespace PteroSharp.Model
 {
-    public class PteroStatsMemory
+    public class PteroStatsDisk
     {
-        
         [JsonProperty("current")]
         public int Current { get; set; }
         

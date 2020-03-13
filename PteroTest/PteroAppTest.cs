@@ -14,7 +14,7 @@ namespace PteroTest
         {
             var lines = File.ReadLines("server.txt");
             
-            _PteroApp = new PteroApp(lines.First(), lines.First());
+            _PteroApp = new PteroApp(lines.First(), lines.Last());
         }
 
         [Test]

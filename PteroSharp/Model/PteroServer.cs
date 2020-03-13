@@ -1,8 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
-using PteroSharp.Response;
 
-namespace PteroSharp
+namespace PteroSharp.Model
 {
     public class PteroServer
     {

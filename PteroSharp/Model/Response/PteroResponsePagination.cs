@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PteroSharp.Response
+namespace PteroSharp.Model.Response
 {
     internal class PteroResponsePagination
     {

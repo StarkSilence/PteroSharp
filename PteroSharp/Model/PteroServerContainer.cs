@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PteroSharp
+namespace PteroSharp.Model
 {
     public class PteroServerContainer
     {

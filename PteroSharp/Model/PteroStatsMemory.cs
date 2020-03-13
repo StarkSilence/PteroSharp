@@ -4,7 +4,6 @@ namespace PteroSharp.Model
 {
     public class PteroStatsMemory
     {
-        
         [JsonProperty("current")]
         public int Current { get; set; }
         

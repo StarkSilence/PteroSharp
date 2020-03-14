@@ -22,27 +22,30 @@
           <e p="PteroResponseConverter.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
-          <e p="PteroConfig.cs" t="Include" />
-          <e p="PteroContainer.cs" t="Include" />
-          <e p="PteroCPU.cs" t="Include" />
-          <e p="PteroDeploy.cs" t="Include" />
-          <e p="PteroDisk.cs" t="Include" />
           <e p="PteroEgg.cs" t="Include" />
-          <e p="PteroEnvironment.cs" t="Include" />
-          <e p="PteroFeatureLimits.cs" t="Include" />
-          <e p="PteroFiles.cs" t="Include" />
-          <e p="PteroFind.cs" t="Include" />
-          <e p="PteroLimits.cs" t="Include" />
           <e p="PteroLocation.cs" t="Include" />
-          <e p="PteroLogs.cs" t="Include" />
-          <e p="PteroMemory.cs" t="Include" />
           <e p="PteroNest.cs" t="Include" />
           <e p="PteroNode.cs" t="Include" />
           <e p="PteroServer.cs" t="Include" />
-          <e p="PteroServerProperties.cs" t="Include" />
-          <e p="PteroStartup.cs" t="Include" />
           <e p="PteroStats.cs" t="Include" />
           <e p="PteroUser.cs" t="Include" />
+          <e p="Sub" t="Include">
+            <e p="PteroConfig.cs" t="Include" />
+            <e p="PteroContainer.cs" t="Include" />
+            <e p="PteroCPU.cs" t="Include" />
+            <e p="PteroDeploy.cs" t="Include" />
+            <e p="PteroDisk.cs" t="Include" />
+            <e p="PteroEnvironment.cs" t="Include" />
+            <e p="PteroFeatureLimits.cs" t="Include" />
+            <e p="PteroFiles.cs" t="Include" />
+            <e p="PteroFind.cs" t="Include" />
+            <e p="PteroLimits.cs" t="Include" />
+            <e p="PteroLogs.cs" t="Include" />
+            <e p="PteroMemory.cs" t="Include" />
+            <e p="PteroScript.cs" t="Include" />
+            <e p="PteroServerProperties.cs" t="Include" />
+            <e p="PteroStartup.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

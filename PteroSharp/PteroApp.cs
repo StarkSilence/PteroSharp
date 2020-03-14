@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using PteroSharp.Json;
 using PteroSharp.Model;
+using JsonConverter = System.Text.Json.Serialization.JsonConverter;
 
 namespace PteroSharp
 {
@@ -22,6 +23,8 @@ namespace PteroSharp
             _HttpClient.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "Application/vnd.pterodactyl.v1+json");
         }
         
+        //Users
+        
         public List<PteroUser> GetUsers()
         {
             return ParseListResponse<PteroUser>(Get("application/users"));
@@ -36,6 +39,8 @@ namespace PteroSharp
         {
             return ParseResponse<PteroUser>(Get($"application/users/external/{externalID}"));
         }
+        
+        //Nodes
 
         public List<PteroNode> GetNodes()
         {
@@ -46,6 +51,8 @@ namespace PteroSharp
         {
             return ParseResponse<PteroNode>(Get($"application/nodes/{id}"));
         }
+        
+        //Locations
 
         public List<PteroLocation> GetLocations()
         {
@@ -56,6 +63,8 @@ namespace PteroSharp
         {
             return ParseResponse<PteroLocation>(Get($"application/locations/{id}"));
         }
+        
+        //Servers
 
         public List<PteroServer> GetServers()
         {
@@ -69,8 +78,10 @@ namespace PteroSharp
 
         public PteroServer GetServer(string externalID)
         {
-            return ParseResponse<PteroServer>(Get($"application/locations/servers/{externalID}"));
+            return ParseResponse<PteroServer>(Get($"application/locations/servers/external/{externalID}"));
         }
+        
+        //Nests
 
         public List<PteroNest> GetNests()
         {
@@ -81,6 +92,20 @@ namespace PteroSharp
         {
             return ParseResponse<PteroNest>(Get($"application/nests/{id}"));
         }
+        
+        //Eggs
+
+        public List<PteroEgg> GetEggs(int nestID)
+        {
+            return ParseListResponse<PteroEgg>(Get($"application/nests/{nestID}/eggs"));
+        }
+
+        public PteroEgg GetEgg(int nestID, int eggID)
+        {
+            return ParseResponse<PteroEgg>(Get($"application/nests/{nestID}/eggs/{eggID}"));
+        }
+        
+        //HTTP
 
         private HttpResponseMessage Get(string path)
         {
@@ -89,6 +114,26 @@ namespace PteroSharp
             return _HttpClient.SendAsync(req).Result;
         }
 
+        private HttpResponseMessage Post<T>(string path, T content)
+        {
+            var req = new HttpRequestMessage(HttpMethod.Post, new Uri($"{_URL}/api/{path}"))
+            {
+                Content = new StringContent(JsonConvert.SerializeObject(content, Formatting.Indented))
+            };
+
+            return _HttpClient.SendAsync(req).Result;
+        }
+
+        private HttpResponseMessage Patch<T>(string path, T content)
+        {
+            var req = new HttpRequestMessage(HttpMethod.Patch, new Uri($"{_URL}/api/{path}"))
+            {
+                Content = new StringContent(JsonConvert.SerializeObject(content, Formatting.Indented))
+            };
+
+            return _HttpClient.SendAsync(req).Result;
+        }
+        
         private List<T> ParseListResponse<T>(HttpResponseMessage res)
         {
             var content = res.Content.ReadAsStringAsync().Result;

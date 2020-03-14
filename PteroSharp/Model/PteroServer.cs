@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using PteroSharp.Model.Sub;
 
 namespace PteroSharp.Model
 {

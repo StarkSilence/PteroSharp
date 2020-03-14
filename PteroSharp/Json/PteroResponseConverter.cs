@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace PteroSharp.Json
 {
-    public class PteroResponseConverter<T> : JsonConverter<T>
+    internal class PteroResponseConverter<T> : JsonConverter<T>
     {
         public override bool CanRead => Attribute.IsDefined(typeof(T), typeof(PteroResponseAttribute));
         public override bool CanWrite => false;

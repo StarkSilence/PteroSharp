@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PteroSharp.Model
+namespace PteroSharp.Model.Sub
 {
     public class PteroFind
     {

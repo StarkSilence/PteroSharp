@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using PteroSharp.Json;
 using PteroSharp.Model;
-using PteroSharp.Model.Response;
 
 namespace PteroSharp
 {
@@ -25,23 +24,22 @@ namespace PteroSharp
         
         public List<PteroUser> GetUsers()
         {
-            var res = ParseResponse<PteroResponse>(Get("application/users"));
-
-            return res.PteroResponseUsers.Select(resUser => resUser.User).ToList();
+            return ParseListResponse<PteroUser>(Get("application/users"));
         }
 
         public PteroUser GetUser(int id)
         {
-            var res = ParseResponse<PteroResponseUser>(Get($"application/users/{id}"));
-
-            return res.User;
+            return ParseResponse<PteroUser>(Get($"application/users/{id}"));
         }
 
         public PteroUser GetUser(string externalID)
         {
-            var res = ParseResponse<PteroResponseUser>(Get($"application/users/external/{externalID}"));
+            return ParseResponse<PteroUser>(Get($"application/users/external/{externalID}"));
+        }
 
-            return res.User;
+        public List<PteroNode> GetNodes()
+        {
+            return ParseListResponse<PteroNode>(Get("application/nodes"));
         }
 
         private HttpResponseMessage Get(string path)
@@ -51,11 +49,18 @@ namespace PteroSharp
             return _HttpClient.SendAsync(req).Result;
         }
 
+        private List<T> ParseListResponse<T>(HttpResponseMessage res)
+        {
+            var content = res.Content.ReadAsStringAsync().Result;
+            
+            return JsonConvert.DeserializeObject<List<T>>(content, new PteroListResponseConverter<T>());
+        }
+        
         private T ParseResponse<T>(HttpResponseMessage res)
         {
             var content = res.Content.ReadAsStringAsync().Result;
             
-            return JsonConvert.DeserializeObject<T>(content);
+            return JsonConvert.DeserializeObject<T>(content, new PteroResponseConverter<T>());
         }
     }
 }

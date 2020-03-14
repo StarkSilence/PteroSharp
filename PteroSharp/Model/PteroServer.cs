@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace PteroSharp.Model
 {
+    [PteroResponse]
     public class PteroServer
     {
         [JsonProperty("id")]

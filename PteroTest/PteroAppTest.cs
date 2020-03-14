@@ -24,5 +24,13 @@ namespace PteroTest
             
             Assert.Pass($"User count: {users.Count}");
         }
+
+        [Test]
+        public void GetUser()
+        {
+            _PteroApp.GetUser(1);
+            
+            Assert.Pass();
+        }
     }
 }

@@ -2,13 +2,10 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroStatsCPU
+    public class PteroDisk
     {
         [JsonProperty("current")]
-        public double Current { get; set; }
-        
-        [JsonProperty("cores")]
-        public double[] Cores { get; set; }
+        public int Current { get; set; }
         
         [JsonProperty("limit")]
         public int Limit { get; set; }

@@ -2,7 +2,7 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroServerDeploy
+    public class PteroDeploy
     {
         [JsonProperty("locations")]
         public int[] Locations { get; set; }

@@ -2,7 +2,7 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroServerContainerEnvironment
+    public class PteroEnvironment
     {
         [JsonProperty("SERVER_JARFILE")]
         public string ServerJarFile { get; set; }

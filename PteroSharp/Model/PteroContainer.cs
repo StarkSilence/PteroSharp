@@ -2,7 +2,7 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroServerContainer
+    public class PteroContainer
     {
         [JsonProperty("startup_command")]
         public string StartupCommand { get; set; }
@@ -14,6 +14,6 @@ namespace PteroSharp.Model
         public bool Installed { get; set; }
         
         [JsonProperty("environment")]
-        public PteroServerContainerEnvironment Environment { get; set; }
+        public PteroEnvironment Environment { get; set; }
     }
 }

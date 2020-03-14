@@ -2,7 +2,7 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroServerFeatureLimits
+    public class PteroFeatureLimits
     {
         [JsonProperty("databases")]
         public int Databases { get; set; }

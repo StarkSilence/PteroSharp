@@ -2,7 +2,7 @@
 
 namespace PteroSharp.Model
 {
-    public class PteroStatsDisk
+    public class PteroMemory
     {
         [JsonProperty("current")]
         public int Current { get; set; }

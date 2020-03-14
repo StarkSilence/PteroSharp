@@ -19,9 +19,10 @@ namespace PteroSharp.Json
         public override List<T> ReadJson(JsonReader reader, Type objectType, List<T> existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             var list = JObject.Load(reader).Value<JArray>("data");
-            var stringList = list.Children().Select(v => v.ToString());
+            var stringList = list.Children().Select(c => c.ToString());
 
-            return stringList.Select(i => JsonConvert.DeserializeObject<T>(i, new PteroResponseConverter<T>())).ToList();
+            var converter = new PteroResponseConverter<T>();
+            return stringList.Select(i => JsonConvert.DeserializeObject<T>(i, converter)).ToList();
         }
     }
 }

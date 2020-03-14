@@ -9,12 +9,12 @@ namespace PteroSharp.Model
         public string State { get; set; }
         
         [JsonProperty("memory")]
-        public PteroStatsMemory Memory { get; set; }
+        public PteroMemory Memory { get; set; }
         
         [JsonProperty("cpu")]
-        public PteroStatsCPU CPU { get; set; }
+        public PteroCPU CPU { get; set; }
         
         [JsonProperty("disk")]
-        public PteroStatsDisk Disk { get; set; }
+        public PteroDisk Disk { get; set; }
     }
 }

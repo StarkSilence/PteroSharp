@@ -42,6 +42,46 @@ namespace PteroSharp
             return ParseListResponse<PteroNode>(Get("application/nodes"));
         }
 
+        public PteroNode GetNode(int id)
+        {
+            return ParseResponse<PteroNode>(Get($"application/nodes/{id}"));
+        }
+
+        public List<PteroLocation> GetLocations()
+        {
+            return ParseListResponse<PteroLocation>(Get("application/locations"));
+        }
+
+        public PteroLocation GetLocation(int id)
+        {
+            return ParseResponse<PteroLocation>(Get($"application/locations/{id}"));
+        }
+
+        public List<PteroServer> GetServers()
+        {
+            return ParseListResponse<PteroServer>(Get("application/servers"));
+        }
+
+        public PteroServer GetServer(int id)
+        {
+            return ParseResponse<PteroServer>(Get($"application/servers/{id}"));
+        }
+
+        public PteroServer GetServer(string externalID)
+        {
+            return ParseResponse<PteroServer>(Get($"application/locations/servers/{externalID}"));
+        }
+
+        public List<PteroNest> GetNests()
+        {
+            return ParseListResponse<PteroNest>(Get("application/nests"));
+        }
+
+        public PteroNest GetNest(int id)
+        {
+            return ParseResponse<PteroNest>(Get($"application/nests/{id}"));
+        }
+
         private HttpResponseMessage Get(string path)
         {
             var req = new HttpRequestMessage(HttpMethod.Get, new Uri($"{_URL}/api/{path}"));

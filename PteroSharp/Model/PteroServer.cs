@@ -31,10 +31,10 @@ namespace PteroSharp.Model
         public bool Suspended { get; set; }
         
         [JsonProperty("limits")]
-        public PteroServerLimits Limits { get; set; }
+        public PteroLimits Limits { get; set; }
         
         [JsonProperty("feature_limits")]
-        public PteroServerFeatureLimits FeatureLimits { get; set; }
+        public PteroFeatureLimits FeatureLimits { get; set; }
         
         [JsonProperty("user")]
         public int User { get; set; }
@@ -61,10 +61,10 @@ namespace PteroSharp.Model
         public string Startup { get; set; }
         
         [JsonProperty("deploy")]
-        public PteroServerDeploy Deploy { get; set; }
+        public PteroDeploy Deploy { get; set; }
         
         [JsonProperty("container")]
-        public PteroServerContainer Container { get; set; }
+        public PteroContainer Container { get; set; }
         
         [JsonProperty("created_at")]
         public DateTime CreatedAt { get; set; }
